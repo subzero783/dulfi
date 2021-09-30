@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
   console.log('custom scripts');  
   
   AOS.init(); 
-
+ 
   // Events calendar
   var content = "<div class='wrapper-01'></div>";
   $(".tribe-events-event-image, .tribe-events-single-event-description, .tribe-events-cal-links").wrapAll( content );
@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
 
   // slick slides
   $('.hero_2_slider').slick({
-    dots: false,
+    dots: false, 
     infinite: true,
     speed: 2000,
     fade: true, 
