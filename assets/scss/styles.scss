@@ -28,6 +28,18 @@ h6 {
   text-transform: uppercase;
 }
 
+#desktop-and-mobile-header {
+  header {
+    .sticky_nav {
+      display: none;
+    }
+  }
+  nav {
+    &.navbar-mobile {
+      display: none;
+    }
+  } 
+}
 
 
 
