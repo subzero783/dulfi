@@ -53,11 +53,11 @@ function js_min(){
 
 // watch task
 function watch_task(){
-  // browserSync.init({
-  //   proxy : 'http://localhost/dulfi/'
-  // })
-  watch('assets/scss/*.scss', compile_scss);
-  watch('assets/js/*.js', js_min)
+  browserSync.init({
+    proxy : 'http://localhost/dulfi/'
+  })
+  watch('assets/scss/*.scss', series(compile_scss, browserSync.reload));
+  watch('assets/js/*.js', series(js_min, browserSync.reload));
 }
 
 exports.default = series(
