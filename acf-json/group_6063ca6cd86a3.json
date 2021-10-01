@@ -122,49 +122,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_60a58e384dffb",
-            "label": "Events page Header Background Image",
-            "name": "events_page_header_background_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_60a58e5b4dffc",
-            "label": "Events page Header Text",
-            "name": "events_page_header_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_6079cb4428770",
             "label": "Footer",
             "name": "",
@@ -977,5 +934,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1631836754
+    "modified": 1633036918
 }

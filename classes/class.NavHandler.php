@@ -54,37 +54,37 @@ class NavHandler
         
         $company_address_br = 'Full Address with Break';
         $company_address = 'Full Address';
-        $phone_number_1_text = get_field('company_info', 'options')['telephone_1_text'];
-        $phone_number_1 = get_field('company_info', 'options')['telephone_1'];
-        $phone_number_2_text = get_field('company_info', 'options')['telephone_2_text'];
-        $phone_number_2 = get_field('company_info', 'options')['telephone_2'];
         $company_email = 'Email';
+
+        $phone_number_1 = !empty(get_field('company_info', 'options')['telephone_1']) && !empty(get_field('company_info', 'options')['telephone_1_text']) ?
+            '<span><span>'.get_field('company_info', 'options')['telephone_1_text'].'</span><span><i class="fas fa-phone-alt"></i> '.get_field('company_info', 'options')['telephone_1'].'</span></span>' : '';
+
+        $phone_number_2 = 
+            !empty(get_field('company_info', 'options')['telephone_2']) && !empty(get_field('company_info', 'options')['telephone_2_text']) ? 
+                '<span><span>'.get_field('company_info', 'options')['telephone_2_text'].'</span><span><i class="fas fa-phone-alt"></i> '.get_field('company_info', 'options')['telephone_2'].'</span></span>' : '';
+
         
-        $header_phone_1 = '';
+        
         $format_phone_1 = '
             <a id="header_phone_1" href="tel:%s">
-                <div class="phone_text"><span><span>%s</span><span><i class="fas fa-phone-alt"></i> %s</span></span></div>
+                <div class="phone_text">%s</div>
             </a>
         ';
 
         $header_phone_1 = sprintf(
             $format_phone_1,
-            $phone_number_1,
-            !empty($phone_number_1)? $phone_number_1_text : '',
             $phone_number_1
         );
 
-        $header_phone_2 = '';
+        
         $format_phone_2 = '
             <a id="header_phone_2" href="tel:%s">
-                <div class="phone_text"><span><span>%s</span><span><i class="fas fa-phone-alt"></i> %s</span></span></div>
+                <div class="phone_text">%s</div>
             </a>
         ';
 
         $header_phone_2 = sprintf(
             $format_phone_2,
-            $phone_number_2,
-            !empty($phone_number_2)? $phone_number_2_text : '',
             $phone_number_2
         );
 
@@ -99,21 +99,15 @@ class NavHandler
 
         $format_header = '
             <header class="header" id="ag_header_one">
-                <div>
-                    <div>
+                <div id="top_bar">%s %s %s</div>
+                <div id="bottom_bar">
+                    <div id="logo">
                         %s
                     </div>
-                    <div class="logo">
-                        %s
-                    </div>
-                    <div>
-                        %s
+                    <div id="main_nav">
                         %s
                     </div>
                 </div>
-                <nav class="ag_header_one_first_nav">
-                    %s
-                </nav>
                 <nav class="sticky_nav">
                     %s
                     %s
@@ -124,11 +118,16 @@ class NavHandler
             $format_header,
             // $header['use_sticky_navigation_as_top_navigation'] === true ? 'sticky_nav_appear' : '',
             get_social_icons(),
-            $content_logo,
+
             $header_phone_1,
             $header_phone_2,
-            get_site_nav(),
+
             $content_logo,
+
+            get_site_nav(),
+
+            $content_logo,
+
             get_site_nav()
         );
         /**

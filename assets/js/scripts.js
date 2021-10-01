@@ -37,10 +37,10 @@ jQuery(document).ready(function($){
   
   function scrollFunction() {
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-      $("nav.sticky_nav").addClass("sticky");
+      $("nav#sticky_nav").addClass("sticky");
       $(".navbar-mobile").addClass("mobile-sticky");
     } else {
-      $("nav.sticky_nav").removeClass("sticky"); 
+      $("nav#sticky_nav").removeClass("sticky"); 
       $(".navbar-mobile").removeClass("mobile-sticky"); 
     } 
   }
