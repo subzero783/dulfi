@@ -16,6 +16,17 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "VAG Round", sans-serif; 
 }
+
+ul {
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+img {
+  width: 100%;
+}
  
 h1,
 h2,
@@ -29,7 +40,99 @@ h6 {
 }
 
 #desktop-and-mobile-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  // background-color: rgba( 0, 0, 0, .34);
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.3) 39%, rgba(0,0,0,0.1) 100%);
   header {
+    #top_bar {
+      width: 100%;
+      
+      > div {
+        max-width: 1680px;
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        .site__social-media {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          margin-right: 20px;
+          margin-bottom: 0;
+          > li {
+            margin-right: 10px;
+            > a {
+              background-color: #2c2f85;
+              padding: 5px 10px;
+              border-radius: 5px;
+              
+              > svg {
+                font-size: 16px;
+                color: #fff;
+              }
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+        #header_phone_1 {
+          > div {
+            font-size: 18px;
+            color: #fff;
+          }
+          &:hover, 
+          &:active, 
+          &:focus {
+            color: #a71c19;
+            text-decoration: none;
+          }
+        }
+      }
+      
+    }
+    #bottom_bar {
+      max-width: 1680px;
+      margin: 15px auto 15px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      #logo {
+        .header-logo {
+          > img {
+            max-width: 95px;
+          }
+        }
+      }
+      #main_nav {
+        > ul {
+          display: flex;
+          flex-flow: row wrap;
+          > li {
+            > a {
+              font-size: 18px;
+              padding: 6px 12px;
+              color: #fff;
+              transition: all .2s ease-out;
+              &:hover, 
+              &:active, 
+              &:focus {
+                background-color: #fff !important;
+                color: #a71c19;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
     .sticky_nav {
       display: none;
     }
@@ -41,5 +144,22 @@ h6 {
   } 
 }
 
+main {
+  > .hero_1_block {
+    margin-top: 45px;
+    .slide {
+      
+    }
+  }
+}
 
+// extra classes 
+.hover-to-background-change-01 {
+  transition: all .2s ease-out;
+  &:hover, 
+  &:active, 
+  &:focus {
+    background-color: #000 !important;
+  }
+}
 

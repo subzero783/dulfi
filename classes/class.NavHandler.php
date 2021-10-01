@@ -73,7 +73,8 @@ class NavHandler
 
         $header_phone_1 = sprintf(
             $format_phone_1,
-            $phone_number_1
+            !empty(get_field('company_info', 'options')['telephone_1']) ? get_field('company_info', 'options')['telephone_1'] : '',
+            !empty(get_field('company_info', 'options')['telephone_1_text']) ? get_field('company_info', 'options')['telephone_1_text'] : ''
         );
 
         
@@ -85,7 +86,8 @@ class NavHandler
 
         $header_phone_2 = sprintf(
             $format_phone_2,
-            $phone_number_2
+            !empty(get_field('company_info', 'options')['telephone_2']) ? get_field('company_info', 'options')['telephone_2'] : '',
+            !empty(get_field('company_info', 'options')['telephone_2_text']) ? get_field('company_info', 'options')['telephone_2_text'] : ''
         );
 
         
@@ -99,7 +101,9 @@ class NavHandler
 
         $format_header = '
             <header class="header" id="ag_header_one">
-                <div id="top_bar">%s %s %s</div>
+                <div id="top_bar">
+                    <div>%s %s %s</div>
+                </div>
                 <div id="bottom_bar">
                     <div id="logo">
                         %s
@@ -107,6 +111,7 @@ class NavHandler
                     <div id="main_nav">
                         %s
                     </div>
+                    <div></div>
                 </div>
                 <nav class="sticky_nav">
                     %s

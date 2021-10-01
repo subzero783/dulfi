@@ -49,7 +49,7 @@ function get_social_icons()
         $content_social_icons .= '<ul class="site__social-media">';
         $format_social_icons = '
 			<li>
-				<a href="%s" title="Social icon button" target="_blank">
+				<a class="hover-to-background-change-01" href="%s" title="Social icon button" target="_blank">
 					%s
 				</a>
 			</li>

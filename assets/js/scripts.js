@@ -1,11 +1,13 @@
 jQuery(document).ready(function($){
   console.log('custom scripts');  
+
+
   
   // slick slides
-  $('.hero_2_slider').slick({
+  $('.hero_1_block').slick({
     dots: false, 
     infinite: true,
-    speed: 2000,
+    speed: 3000,
     fade: true, 
     cssEase: 'linear',
     autoplaySpeed: 3000,
