@@ -38,8 +38,7 @@ jQuery(document).ready(function($){
   };
   $(window).load(function(){
     $('.masonry-grid').css({
-      'display' : 'flex',
-      'columnWidth': 50
+      'display' : 'flex'
     }).masonry({
       // options... 
       itemSelector: '.grid-item'
