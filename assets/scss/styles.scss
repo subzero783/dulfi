@@ -3,6 +3,31 @@
 @import "node_modules/slick-carousel/slick/slick.scss";
 @import "node_modules/slick-carousel/slick/slick-theme.scss";
 
+/*
+Bootstrap grid
+1200px
+992px
+768px
+576px
+
+@media only screen and (max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 992px){
+  
+}
+
+@media only screen and (max-width: 768px){
+  
+}
+
+@media only screen and (max-width: 576px){
+  
+}
+
+*/
+
 blockquote, 
 body {
   line-height: 25px;
@@ -50,7 +75,6 @@ h6 {
   header {
     #top_bar {
       width: 100%;
-      
       > div {
         max-width: 1680px;
         margin: 0 auto;
@@ -145,10 +169,27 @@ h6 {
 }
 
 main {
+
   > .hero_1_block {
     margin-top: 45px;
-    .slide {
+    .slide { 
       
+    }
+  }
+  > .three_columns_1_block {
+    &.container {
+      padding: 50px 15px;
+      max-width: 1700px;
+      > .row {
+        > .col {
+          @media only screen and (max-width: 768px){
+            padding-bottom: 25px;
+            &:last-child {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
