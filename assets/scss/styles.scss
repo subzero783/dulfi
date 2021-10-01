@@ -220,7 +220,8 @@ main {
       }
     }
   }
-  > .two_columns_1_block {
+  > .two_columns_1_block,
+  > .two_columns_2_block {
     .container {
       max-width: 1680px;
       padding: 0 0 50px;
@@ -236,6 +237,23 @@ main {
         padding: 0 10px 10px;
         @media only screen and (max-width: 768px){
           width: 100%;
+        }
+      }
+    }
+  }
+  > .two_columns_2_block {
+    .container {
+      max-width: unset;
+      width: 100%;
+      padding: 0;
+    }
+    .images_container {
+      justify-content: center;
+      > div {
+        width: unset;
+        padding: 0;
+        @media only screen and (max-width: 768px){
+          width: 100%; 
         }
       }
     }
