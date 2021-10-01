@@ -333,23 +333,59 @@ footer {
             text-align: center;
             color: #fff;
           }
+          > div.wpcf7 {
+            margin-top: 30px;
+            > form {
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: center;
+              justify-content: center;
+              > p:first-of-type {
+                > label {
+                  margin: 0;
+                  > span {
+                    > input[type=email] {
+                      padding: 5px;
+                    }
+                  }
+                }
+              }
+              > p:last-of-type {
+                > input[type=submit]{
+                  border: none;
+                  border-radius: 0;
+                  padding: 7px 15px;
+                  position: relative;
+                  font-size: 15px;
+                  top: 0;
+                  background-color: #cb2323;
+                  color: #fff;
+                }
+              }
+              .wpcf7-response-output {
+                color: #cb2323;
+              }
+            }
+          }
         }
       }
     }
     #footer_bottom {
       padding: 75px 0 0 0;
-      > p {
-        text-align: center;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 400;
-      }
-      > div.wpcf7 {
-        > form {
-          display: flex;
-          flex-flow: row nowrap;
+      > .container {
+        > .row {
+          > .col { 
+            > p {
+              text-align: center;
+              color: #fff;
+              font-size: 14px;
+              font-weight: 400;
+            }
+            
+          }
         }
       }
+
     }
   }
 } 
