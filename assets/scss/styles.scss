@@ -230,15 +230,18 @@ main {
         margin-bottom: 40px;
       }
     }
-    .images_container {
+    .images_container { 
       justify-content: center;
       padding-left: 10px;
+      @media only screen and (max-width: 768px){
+        padding-right: 10px;
+      }
       > div {
         width: 49%;
         padding: 0 10px 10px 0; 
         @media only screen and (max-width: 768px){
           width: 100%;
-          padding: 0 10px 10px 10px;
+          padding: 0 0 10px 0;
         }
       }
     }
