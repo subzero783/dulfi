@@ -43,6 +43,7 @@ body {
 }
 
 ul {
+  margin: 0;
   li {
     margin: 0;
     padding: 0;
@@ -52,6 +53,19 @@ ul {
 img {
   width: 100%;
 }
+
+a {
+  &:hover, 
+  &:active, 
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
  
 h1,
 h2,
@@ -59,9 +73,22 @@ h3,
 h4,
 h5,
 h6 {
+  color: #3a3b8d;
   margin: 25px 0;
   line-height: 1.3em;
   text-transform: uppercase;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.color-blue-01 {
+  color: #3a3b8d;
+} 
+
+.title-01 {
+  font-size: 40px
 }
 
 #desktop-and-mobile-header {
@@ -121,13 +148,13 @@ h6 {
       }
       
     }
-    #bottom_bar {
+    #bottom_bar { 
       max-width: 1680px;
       margin: 15px auto 15px;
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       #logo {
         .header-logo {
           > img {
@@ -136,6 +163,7 @@ h6 {
         }
       }
       #main_nav {
+        margin-left: 20px;
         > ul {
           display: flex;
           flex-flow: row wrap;
@@ -187,6 +215,51 @@ main {
             &:last-child {
               padding-bottom: 0;
             }
+          }
+        }
+      }
+    }
+  }
+  > .two_columns_1_block {
+    .container {
+      max-width: 1680px;
+      padding: 0 0 50px;
+    }
+    .images_container {
+      justify-content: center;
+      > div {
+        width: 50%;
+        padding: 0 10px 10px;
+        @media only screen and (max-width: 768px){
+          width: 100%;
+        }
+      }
+    }
+  }
+  > .social_media_columns_1_block {
+    background-color: #cb2323;
+    padding: 15px 15px;
+    > .container {
+      max-width: 1680px;
+      > .row {
+        align-items: center;
+        > .col:first-child {
+          @media only screen and (max-width: 768px){
+            padding-bottom: 25px;
+          }
+          > a {
+            text-align: center;
+            > p {
+              color: #fff;
+              font-size: 40px;
+            }
+          }
+        }
+        > .col:last-child {
+          > p {
+            color: #fff;
+            max-width: 415px;
+            margin: 0 auto;
           }
         }
       }

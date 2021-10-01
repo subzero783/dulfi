@@ -41,6 +41,7 @@ function js_min(){
     './node_modules/@fortawesome/fontawesome-free/js/all.min.js',
     './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
     './node_modules/slick-carousel/slick/slick.js',
+    './node_modules/masonry-layout/dist/masonry.pkgd.min.js',
     './assets/js/scripts.js'
   ])
     .pipe(concat('main.js'))

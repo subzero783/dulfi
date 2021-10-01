@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
       $(".navbar-collapse").removeClass("ag-show");
     }else{
       $(".navbar-collapse").addClass("ag-show"); 
-    }
+    } 
   });
 
   //Video play
@@ -36,6 +36,15 @@ jQuery(document).ready(function($){
   window.onscroll = function() {
     scrollFunction();
   };
+  $(window).load(function(){
+    $('.masonry-grid').css({
+      'display' : 'flex',
+      'columnWidth': 50
+    }).masonry({
+      // options... 
+      itemSelector: '.grid-item'
+    }); 
+  });
   
   function scrollFunction() {
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
