@@ -2,76 +2,40 @@
 	$footer_info = get_field('footer', 'options');
     $company_info = get_field('company_info', 'options');
 
-    function footer_column_content( $titles_and_text, $extra_content=null){
-
-        $column_content = '<ul class="titles_and_text">';
-
-        $column_title_and_text_guide = '
-            <li>
-                %s
-                <div>%s</div>
-            </li>
-        ';
-
-        $column_titles_and_text_content = '';
-
-        foreach($titles_and_text as $item){
-            $column_content .= sprintf(
-                $column_title_and_text_guide, 
-                !empty($item['title'])? '<h5>'.$item['title'].'</h5>' : '',
-                $item['text']
-            );
-        }
-
-        $column_content .= '</ul>';
-
-        echo $column_content;
-    }
+    $col_1_menu = wp_nav_menu(array(
+        'menu' => $footer_info['menu_id_1'], 
+        'container' => '', 
+        'items_wrap' => '<ul class="nav-menu navlinks">%3$s</ul>',
+        'echo' => false
+    ));
+    $col_2_menu = wp_nav_menu(array(
+        'menu' => $footer_info['menu_id_2'], 
+        'container' => '', 
+        'items_wrap' => '<ul class="nav-menu navlinks">%3$s</ul>',
+        'echo' => false
+    ));
 ?>
 
-<div id="footer_1" role="contentinfo">
+<footer id="footer_1" role="contentinfo">
 	<div class="container">
 		<div class="row">
-			<div class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <?php 
-                    if(!empty($footer_info['column_1_titles_and_text'])){
-                        footer_column_content($footer_info['column_1_titles_and_text']);
-                    }
-                    echo (!empty($footer_info['add_social_icons_1']) && $footer_info['add_social_icons_1'] == true)? get_social_icons() : '';
-                    echo (!empty($footer_info['add_shortcode_1']) && $footer_info['add_shortcode_1'] == true)? '<div class="form_container_1">'.do_shortcode($footer_info['shortcode_1']).'</div>' : '';
-                ?>
+			<div id="footer_col_1" class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-2">
+            <?php echo !empty($footer_info['image']) ? '<img src="'.$footer_info['image']['url'].'" alt="'.$footer_info['image']['alt'].'" />' : ''; ?>
 			</div>
-			<div class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <?php
-                    if(!empty($footer_info['column_2_titles_and_text'])){
-                        footer_column_content($footer_info['column_2_titles_and_text']);
-                    }
-                    echo (!empty($footer_info['add_social_icons_2']) && $footer_info['add_social_icons_2'] == true)? get_social_icons() : '';
-                    echo (!empty($footer_info['add_shortcode_2']) && $footer_info['add_shortcode_2'] == true)? '<div class="form_container_1">'.do_shortcode($footer_info['shortcode_2']).'</div>' : '';
-                ?>
+			<div id="footer_col_2" class="col col-12 col-sm-6 col-md-6 col-lg-2 col-xl-2">
+                <?php echo $col_1_menu; ?>
 			</div>
-			<div class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <?php
-                    if(!empty($footer_info['column_3_titles_and_text'])){
-                        footer_column_content($footer_info['column_3_titles_and_text']);
-                    }
-                    echo (!empty($footer_info['add_social_icons_3']) && $footer_info['add_social_icons_3'] == true)? get_social_icons() : '';
-                    echo (!empty($footer_info['add_shortcode_3']) && $footer_info['add_shortcode_3'] == true)? '<div class="form_container_1">'.do_shortcode($footer_info['shortcode_3']).'</div>' : '';
-                ?>
+			<div id="footer_col_3" class="col col-12 col-sm-6 col-md-6 col-lg-2 col-xl-2">
+                <?php echo $col_2_menu; ?>
 			</div>
-			<div class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <?php 
-                    if(!empty($footer_info['column_4_titles_and_text'])){
-                        footer_column_content($footer_info['column_4_titles_and_text']);
-                    }
-                    echo (!empty($footer_info['add_social_icons_4']) && $footer_info['add_social_icons_4'] == true)? get_social_icons() : '';
-                    echo (!empty($footer_info['add_shortcode_4']) && $footer_info['add_shortcode_4'] == true)? '<div class="form_container_1">'.do_shortcode($footer_info['shortcode_4']).'</div>' : '';
-                ?>
+			<div id="footer_col_4" class="col col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6">
+                <?php echo !empty($footer_info['title']) ? '<p><strong>'.$footer_info['title'].'</strong></p>' : ''; ?>
+                <?php echo do_shortcode($footer_info['shortcode_4']);?>
 			</div>
 		</div>
 
 	</div>
-    <div class="container">
+    <div id="footer_bottom" class="container">
         <div class="container">
             <div class="row">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -86,7 +50,7 @@
             </div>
         </div>
     </div>
-</div>
+</footer>
 	<?php wp_footer(); ?>
 </body>
 </html>
