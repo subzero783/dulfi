@@ -349,7 +349,7 @@ h6 {
     &#sticky_nav {
       padding: 0 41px;
       max-width: none;
-      background-color: #1d1d1d;
+      background-color: #fff;
       top: 0px; 
       width: 100%;
       transform: translateY(-100%);
@@ -379,12 +379,11 @@ h6 {
           > a {
             font-size: 18px;
             padding: 6px 12px;
-            color: #fff;
+            color: #3a3b8d;
             transition: all .2s ease-out;
             &:hover, 
             &:active, 
             &:focus {
-              background-color: #fff !important;
               color: #a71c19;
               text-decoration: none;
             }
@@ -538,6 +537,9 @@ footer {
           display: flex;
           flex-flow: column nowrap;
           align-items: center;
+          @media only screen and (max-width: 992px){
+            margin-top: 20px;
+          }
           @media only screen and (max-width: 576px){
             align-items:flex-start;
           }
