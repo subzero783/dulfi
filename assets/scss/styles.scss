@@ -552,7 +552,7 @@ footer {
                 width: 75%;
                 display: inline-block;
                 vertical-align: top;
-                height: 100%;
+                
                 @media only screen and (max-width: 768px){ 
                   width: 65%;
                 }
@@ -568,9 +568,11 @@ footer {
                     -webkit-box-shadow: none;
                     -moz-box-shadow: none;
                     box-shadow: none; 
+                    -webkit-appearance:none !important; 
+                    height: 50px;
                   }
                 }
-              }
+              } 
               > p:last-of-type {
                 width: 24%;
                 display: inline-block;
@@ -585,10 +587,11 @@ footer {
                   border-radius: 0;
                   padding: 7px 15px;
                   position: relative;
-                  font-size: 15px;
+                  font-size: 14px; 
                   top: 0;
                   background-color: #cb2323;
                   color: #fff;
+                  height: 50px;
                 }
                 > .ajax-loader {
                   display: none;
