@@ -6,7 +6,7 @@
             $image_guide = '
                 <div class="grid-item">
                     <a href="%s" target="%s" title="%s">
-                        <img src="%s" alt="%s" />
+                        %s
                     </a>
                 </div>
             ';
@@ -17,8 +17,7 @@
                     !empty($image['image_link']) ? $image['image_link']['url'] : '',
                     !empty($image['image_link']) ? $image['image_link']['target'] : '',
                     !empty($image['image_link']) ? $image['image_link']['title'] : '',
-                    !empty($image['image']) ? $image['image']['url'] : '',
-                    !empty($image['image']) ? $image['image']['alt'] : ''
+                    $image['image_svg_or_file'] ? $image['svg'] : '<img src="'.$image['image']['url'].'" alt="'.$image['image']['alt'].'" />'
                 );
             }
             echo !empty($field['title']) ? '<h2 class="text-align-center title-01">'.$field['title'].'</h2>' : '';

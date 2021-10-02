@@ -226,13 +226,67 @@
                                     "return_format": "array"
                                 },
                                 {
+                                    "key": "field_6157a894a0d2d",
+                                    "label": "Image SVG or File",
+                                    "name": "image_svg_or_file",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 1,
+                                    "ui": 1,
+                                    "ui_on_text": "URL",
+                                    "ui_off_text": "File"
+                                },
+                                {
+                                    "key": "field_6157a8d0a0d2e",
+                                    "label": "SVG",
+                                    "name": "svg",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_6157a894a0d2d",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
+                                },
+                                {
                                     "key": "field_615749ce4c55c",
                                     "label": "Image",
                                     "name": "image",
                                     "type": "image",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_6157a894a0d2d",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -544,5 +598,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1633117164
+    "modified": 1633135828
 }
