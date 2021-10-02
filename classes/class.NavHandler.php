@@ -113,7 +113,7 @@ class NavHandler
                     </div>
                     <div></div>
                 </div>
-                <nav class="sticky_nav">
+                <nav id="sticky_nav">
                     %s
                     %s
                 </nav>

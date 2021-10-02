@@ -1,8 +1,6 @@
 jQuery(document).ready(function($){
   console.log('custom scripts');  
 
-
-  
   // slick slides
   $('.hero_1_block').slick({
     dots: false, 
