@@ -193,6 +193,21 @@
                     "mime_types": ""
                 },
                 {
+                    "key": "field_6157e774b0d0e",
+                    "label": "Image Link",
+                    "name": "image_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
                     "key": "field_6079df6b8c3ff",
                     "label": "Column 2",
                     "name": "",
@@ -327,7 +342,7 @@
             ]
         },
         {
-            "key": "field_606b5fe976830",
+            "key": "field_6157e7a96fc49",
             "label": "Company Info",
             "name": "",
             "type": "tab",
@@ -546,5 +561,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1633119530
+    "modified": 1633150904
 }

@@ -19,8 +19,8 @@
 <footer id="footer_1" role="contentinfo">
 	<div class="container">
 		<div class="row">
-			<div id="footer_col_1" class="col col-12 col-sm-6 col-md-6 col-lg-3 col-xl-2">
-            <?php echo !empty($footer_info['image']) ? '<img src="'.$footer_info['image']['url'].'" alt="'.$footer_info['image']['alt'].'" />' : ''; ?>
+			<div id="footer_col_1" class="col col-12 col-sm-6 col-md-6 col-lg-2 col-xl-2">
+            <?php echo !empty($footer_info['image']) ? '<a href="'.$footer_info['image_link']['url'].'" target="'.$footer_info['image_link']['target'].'" title="'.$footer_info['image_link']['title'].'"><img src="'.$footer_info['image']['url'].'" alt="'.$footer_info['image']['alt'].'" /></a>' : ''; ?>
 			</div>
 			<div id="footer_col_2" class="col col-12 col-sm-6 col-md-6 col-lg-2 col-xl-2">
                 <?php echo $col_1_menu; ?>
@@ -28,7 +28,7 @@
 			<div id="footer_col_3" class="col col-12 col-sm-6 col-md-6 col-lg-2 col-xl-2">
                 <?php echo $col_2_menu; ?>
 			</div>
-			<div id="footer_col_4" class="col col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6">
+			<div id="footer_col_4" class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <?php echo !empty($footer_info['title']) ? '<p><strong>'.$footer_info['title'].'</strong></p>' : ''; ?>
                 <?php echo do_shortcode($footer_info['shortcode_4']);?>
 			</div>
