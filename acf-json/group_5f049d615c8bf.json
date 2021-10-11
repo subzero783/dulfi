@@ -71,6 +71,35 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6163bb2359881": {
+                    "key": "layout_6163bb2359881",
+                    "name": "instagram_social_feed",
+                    "label": "Instagram Social Feed",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6163bb2d59882",
+                            "label": "Add Shortcode",
+                            "name": "shortcode",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_615759512bfcf": {
                     "key": "layout_615759512bfcf",
                     "name": "social_media_columns_1",
@@ -598,5 +627,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1633135828
+    "modified": 1633925964
 }

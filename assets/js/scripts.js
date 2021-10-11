@@ -52,4 +52,7 @@ jQuery(document).ready(function($){
       $(".navbar-mobile").removeClass("mobile-sticky"); 
     } 
   }
+
+  // Instagram social feed block
+  $('#sb_instagram #sbi_images > .sbi_item:lt(4)').wrapAll('<div class="left_side"></div>');
 });   

@@ -500,6 +500,32 @@ main {
       }
     }
   }
+  > .instagram_social_feed_block {
+    #sbi_images {
+      display: flex;
+      flex-flow: row wrap;
+      position: relative;
+      > .left_side {
+        width: 50% !important;
+        display: flex;
+        flex-flow: row wrap;
+        > .sbi_item {
+          width: 50% !important;
+        }
+      }
+      > .sbi_item {
+        width: 50% !important;
+        > .sbi_photo_wrap {
+          width: 100% !important;
+          height: 100% !important;
+          > .sbi_photo {
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
