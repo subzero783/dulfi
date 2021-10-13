@@ -103,7 +103,7 @@
         get_home_url(),
         $content_logo,
         get_site_nav_mobile(),
-        get_social_icons()
+        get_social_icons_top_nav()
     );
 
 
