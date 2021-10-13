@@ -44,28 +44,124 @@ function get_social_icons()
     $company_info = get_field('company_info', 'options');
 
     $content_social_icons = '';
+
     // if we have social media icons
     if (!empty($company_info['social_media'])) {
+
         $content_social_icons .= '<ul class="site__social-media">';
+
         $format_social_icons = '
 			<li>
-				<a class="hover-to-background-change-01" href="%s" title="Social icon button" target="_blank">
+				<a class="hover-to-background-change-01" href="%s" title="%s" target="_blank">
 					%s
 				</a>
 			</li>
 		';
+
         foreach ($company_info['social_media'] as $social_icon) {
+
             $url = $social_icon['url'];
             
             $icon_html = $social_icon['icon'];
+
+            $title = $social_icon['title'];
             
             if (!empty($url)) {
                 $content_social_icons .= sprintf(
                     $format_social_icons,
                     $url,
+                    $title,
                     $icon_html
                 );
             }
+        }
+        $content_social_icons .= '</ul>';
+    }
+    return $content_social_icons;
+}
+
+function get_social_icons_top_nav(){
+    $company_info = get_field('company_info', 'options');
+
+    $content_social_icons = '';
+
+    // if we have social media icons
+    if (!empty($company_info['social_media'])) {
+
+        $content_social_icons .= '<ul class="site__social-media">';
+
+        $format_social_icons = '
+			<li>
+				<a class="hover-to-background-change-01" href="%s" title="%s" target="_blank">
+					%s
+				</a>
+			</li>
+		';
+
+        foreach ($company_info['social_media'] as $social_icon) {
+
+            if($social_icon['show_on_top_nav']){
+
+                $url = $social_icon['url'];
+                
+                $icon_html = $social_icon['icon'];
+                
+                $title = $social_icon['title'];
+            
+                if (!empty($url)) {
+                    $content_social_icons .= sprintf(
+                        $format_social_icons,
+                        $url,
+                        $title,
+                        $icon_html
+                    );
+                }
+            }
+
+        }
+        $content_social_icons .= '</ul>';
+    }
+    return $content_social_icons;
+}
+
+function get_social_icons_banner_1_block(){
+    $company_info = get_field('company_info', 'options');
+
+    $content_social_icons = '';
+
+    // if we have social media icons
+    if (!empty($company_info['social_media'])) {
+
+        $content_social_icons .= '<ul class="site__social-media">';
+
+        $format_social_icons = '
+			<li>
+				<a href="%s" title="%s" target="_blank">
+					%s
+				</a>
+			</li>
+		';
+
+        foreach ($company_info['social_media'] as $social_icon) {
+
+            if($social_icon['show_on_banner_1_block']){
+
+                $url = $social_icon['url'];
+                
+                $icon_html = $social_icon['icon'];
+                
+                $title = $social_icon['title'];
+            
+                if (!empty($url)) {
+                    $content_social_icons .= sprintf(
+                        $format_social_icons,
+                        $url,
+                        $title,
+                        $icon_html
+                    );
+                }
+            }
+
         }
         $content_social_icons .= '</ul>';
     }

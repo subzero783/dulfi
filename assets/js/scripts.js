@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
   console.log('custom scripts');  
 
   // slick slides
-  $('.hero_1_block').slick({
+  $('.hero_1_slider').slick({
     dots: false, 
     infinite: true,
     speed: 3000,

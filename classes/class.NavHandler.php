@@ -121,8 +121,8 @@ class NavHandler
         ';
         $this->header_one = sprintf( 
             $format_header,
-            // $header['use_sticky_navigation_as_top_navigation'] === true ? 'sticky_nav_appear' : '',
-            get_social_icons(),
+            
+            get_social_icons_top_nav(),
 
             $header_phone_1,
             $header_phone_2,

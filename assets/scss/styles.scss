@@ -115,6 +115,7 @@ h6 {
     }
     #top_bar {
       width: 100%;
+      margin-top: -4px;
       > div {
         max-width: 1680px;
         margin: 0 auto;
@@ -147,15 +148,19 @@ h6 {
           }
         }
         #header_phone_1 {
-          > div {
-            font-size: 18px;
-            color: #fff;
-          }
           &:hover, 
           &:active, 
           &:focus {
-            color: #a71c19;
-            text-decoration: none;
+            > div {
+              color: #a71c19;
+              text-decoration: none; 
+            }
+          }
+          > div {
+            padding: 5px;
+            font-size: 18px;
+            color: #fff;
+            transition: all .2s ease-out;
           }
         }
       }
@@ -291,9 +296,7 @@ h6 {
                   font-size: 16px;
                   font-weight: 500;
                   -webkit-font-smoothing: antialiased;
-                  // font-family: "Montserrat", sans-serif;
                   text-transform: uppercase;
-                  // font-weight: 700;
                 }
               }
             }
@@ -401,9 +404,37 @@ h6 {
 
 main {
   > .hero_1_block {
+    position: relative;
     margin-top: 45px;
     @media only screen and (max-width: 992px){
       margin-top: 87px;
+    }
+    > .social_media_icons {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translate(0, -50%);
+      > ul {
+        > li {
+          margin-bottom: 20px;
+          > a {
+            padding: 5px;
+            &:hover, 
+            &:active, 
+            &:focus {
+              background-color: transparent;
+              > svg {
+                color: #a71c19;
+                transition: all .2s ease-out;
+              }
+            }
+            > svg {
+              font-size: 24px;
+              color: #000;
+            }
+          }
+        }
+      }
     }
   }
   > .three_columns_1_block {
@@ -554,6 +585,14 @@ footer {
               
               > a {
                 color: #fff;
+                transition: all .2s ease-out;
+                padding: 6px 12px;
+                &:hover,
+                &:active, 
+                &:focus {
+                  background-color: #fff;
+                  color:#a71c19;
+                }
               }
             }
           }
