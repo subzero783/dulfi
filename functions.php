@@ -231,7 +231,8 @@ function get_site_nav($pre = 'navlinks')
 {
     // create an unwrapped site nav
     $site__nav = wp_nav_menu(array(
-        'menu' => 'nav__header', 
+        // 'menu' => 'nav__header', 
+        'menu' => '2', 
         'container' => '', 
         'items_wrap' => '<ul class="nav-menu navlinks">%3$s</ul>', 
         'walker' => new NavWalker, 
@@ -280,4 +281,27 @@ function google_tag_manager(){
 ?>
         
 <?php
+}
+
+// Content functions
+function get_title_1( $field ){
+    $guide = '
+        <h2>%s</h2>
+    ';
+    $content = sprintf(
+        $guide, 
+        !empty($field) ? $field : ''
+    );
+    echo $content;
+}
+
+function get_paragraph_text( $field ){
+    $guide = '
+        <p>%s</p>
+    ';
+    $content = sprintf(
+        $guide, 
+        !empty($field)? $field : ''
+    );
+    echo $content;
 }
