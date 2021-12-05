@@ -79,6 +79,27 @@ h6 {
   text-transform: uppercase;
 }
 
+.line-under-heading {
+  position: relative;
+  padding-bottom: 10px;
+  &:before, 
+  &:after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    height: 0;
+  }
+  &:before {
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+  }
+  &:after {
+    width: 50px;
+    border-bottom: 1px solid #cd2122;
+  }
+}
+
 .text-align-center {
   text-align: center;
 }

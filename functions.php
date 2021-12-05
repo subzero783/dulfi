@@ -299,7 +299,7 @@ function get_city_locations($cities){
 
     foreach($cities as $city){
 
-        echo '<div class="city"><h2>'.$city['city_name'].'</h2>';
+        echo '<div class="city"><h2 class="line-under-heading">'.$city['city_name'].'</h2>';
 
         if(!empty($city['locations'])){
             $locations_content = '<ul class="city_locations">';
@@ -325,7 +325,7 @@ function get_image($field){
 }
 function get_title_1( $field ){
     $guide = '
-        <h2>%s</h2>
+        <h2 class="line-under-heading">%s</h2>
     ';
     $content = sprintf(
         $guide, 
