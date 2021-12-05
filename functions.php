@@ -244,7 +244,7 @@ function get_site_nav($pre = 'navlinks')
 function get_site_nav_mobile($pre = 'navlinks')
 {
     $site__nav = wp_nav_menu(array(
-        'menu' => 'nav__header', 
+        'menu' => '2', 
         'container' => '', 
         'items_wrap' => '<ul class="navbar-nav mr-auto">%3$s</ul>', 
         'walker' => new NavWalker, 
@@ -284,6 +284,45 @@ function google_tag_manager(){
 }
 
 // Content functions
+function get_city_locations($cities){
+
+    $location_guide = '
+        <li class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="location_info">
+                <h3>%s</h3>
+                <a href="tel:%s">Tel: %s</a>
+                <a class="map-link" href="%s" target="_blank">Ver Mapa</a>
+            </div>
+        </li>
+    ';
+
+    foreach($cities as $city){
+
+        echo '<div class="city"><h2>'.$city['city_name'].'</h2>';
+
+        if(!empty($city['locations'])){
+            $locations_content = '<ul class="city_locations">';
+            foreach($city['locations'] as $location ){
+                $locations_content .= sprintf(
+                    $location_guide,
+                    $location['title'],
+                    $location['telephone'],
+                    $location['telephone'],
+                    $location['map_link']
+                );
+            }
+            $locations_content .= '</ul></div>';
+            echo $locations_content;
+        }
+    }
+}
+function get_content( $field ){
+    echo '<div>'.$field.'</div>';
+}
+function get_image($field){
+    echo !empty($field) ? '<img src="'.$field['url'].'" alt="'.$field['alt'].'" />' : '';
+}
 function get_title_1( $field ){
     $guide = '
         <h2>%s</h2>

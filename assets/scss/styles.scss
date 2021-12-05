@@ -538,6 +538,69 @@ main {
       }
     }
   }
+  > .text_with_contact_form_block {
+    > .container {
+      padding: 50px 15px;
+      max-width: 1120px;
+      > .row {
+        > .col {
+          h2, 
+          p {
+            text-align: center;
+          }
+          h2 {
+            margin-bottom: 0;
+          }
+          form {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            input[type='submit']{
+              background-color: #2c2f85;
+              color: #fff;
+              padding: 10px 20px;
+              font-size: 16px;
+              border: unset;
+              transition: all .2s ease-out;
+              &:hover, 
+              &:active, 
+              &:focus {
+                color: #fff;
+                background-color: #cb2323;
+              }
+            }
+            > .row {
+              margin-bottom: 15px;
+              > .col {
+                > label {
+                  > span {
+                    margin-left: 5px;
+                    color: #cb2323;
+                  }
+                }
+                .wpcf7-form-control-wrap {
+                  width: 100%;
+                  > input {
+                    width: 100%;
+                    border: 1px solid #d3d3d3;
+                    &[type='file']{
+                      border: unset;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          img {
+            padding: 50px 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  > .locations_block {
+
+  }
   > .social_media_columns_1_block {
     background-color: #cb2323;
     padding: 15px 15px;
