@@ -559,6 +559,74 @@ main {
       }
     }
   }
+  > .contacto_row_block {
+    > .container {
+      max-width: 1700px;
+      padding: 50px 15px;
+      > .row {
+        > .col {
+          &:nth-child(1){
+            padding-right: 30px !important;
+            > div {
+              &:nth-child(1){
+                > h2 {
+                  margin-bottom: 10px;
+                }
+                > p {
+                  color: #000;
+                  margin-bottom: 20px;
+                }
+              }
+              &:nth-child(2){
+                > iframe {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          &:nth-child(2){
+            form {
+              > h2,
+              > p {
+                margin-bottom: 10px;
+              }
+              > p {
+                color: #000;
+              }
+              .required {
+                margin-left: 5px;
+                color: #cb2323;
+              }
+              label {
+                color: #4a4a4a;
+              }
+              input, 
+              textarea {
+                width: 100%;
+                border: 1px solid #d3d3d3;
+                &[type='submit'] {
+                  width: fit-content;
+                  margin: 0 auto;
+                  display: block;
+                  color: #fff;
+                  background-color: #3a3b8d;
+                  padding: 10px 20px;
+                  border: unset;
+                  font-size: 16px;
+                  transition: all .2s ease-out;
+                  &:hover, 
+                  &:active, 
+                  &:focus {
+                    background-color: #cb2323;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   > .text_with_contact_form_block {
     > .container {
       padding: 50px 15px;
