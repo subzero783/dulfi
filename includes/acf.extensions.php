@@ -15,17 +15,17 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false,
         'position' 		=> 3,
 	));
-    acf_add_options_page(
-        array(
-            'page_title' => 'Menus',
-            'menu_title' => 'Menus',
-            'menu_slug' => 'menus',
-            'capability' => 'read_private_posts', 
-            'icon_url' => 'dashicons-carrot',
-            'redirect' => false,
-            'position' => 4
-        )
-    );
+    // acf_add_options_page(
+    //     array(
+    //         'page_title' => 'Menus',
+    //         'menu_title' => 'Menus',
+    //         'menu_slug' => 'menus',
+    //         'capability' => 'read_private_posts', 
+    //         'icon_url' => 'dashicons-carrot',
+    //         'redirect' => false,
+    //         'position' => 4
+    //     )
+    // );
 }
 
 
