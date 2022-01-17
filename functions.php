@@ -344,3 +344,8 @@ function get_paragraph_text( $field ){
     );
     echo $content;
 }
+
+// Woocommerce
+
+add_theme_support('woocommerce');
+
