@@ -349,3 +349,27 @@ function get_paragraph_text( $field ){
 
 add_theme_support('woocommerce');
 
+add_action('woocommerce_before_main_content', 'catalog_open_div', 5);
+
+function catalog_open_div() {
+    echo '<div class="primary-and-sidebar-wrapper">';
+}
+add_action('woocommerce_sidebar', 'catalog_closing_div', 50);
+
+function catalog_closing_div() {
+    echo '</div>';
+}
+
+//Reposition WooCommerce breadcrumb 
+function woocommerce_remove_breadcrumb(){
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+}
+add_action( 'woocommerce_before_main_content', 'woocommerce_remove_breadcrumb' );
+
+function woocommerce_custom_breadcrumb(){
+    woocommerce_breadcrumb();
+}
+
+add_action( 'woo_custom_breadcrumb', 'woocommerce_custom_breadcrumb' );
+
+
