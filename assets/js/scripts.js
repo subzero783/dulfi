@@ -50,9 +50,16 @@ jQuery(document).ready(function($){
     } else {
       $("nav#sticky_nav").removeClass("sticky"); 
       $(".navbar-mobile").removeClass("mobile-sticky"); 
-    } 
+    }  
   }
 
   // Instagram social feed block
   $('#sb_instagram #sbi_images > .sbi_item:lt(4)').wrapAll('<div class="left_side"></div>');
+
+  // Catalog/Tienda/Store page JS
+  var wrapperDiv = '<div class="right-side-content"></div>';
+  $('.woocommerce-notices-wrapper, .woocommerce-result-count, .woocommerce-ordering, ul.products').wrapAll(wrapperDiv);
+
+  var wrapperDiv2 = '<div class="top-content"></div>';
+  $('.woocommerce-breadcrumb, .woocommerce-products-header').wrapAll(wrapperDiv2);
 });   

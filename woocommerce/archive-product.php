@@ -19,6 +19,12 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
+$catalog = get_field('hero_image','options');
+
+?>
+<section id="catalog-hero" <?php echo !empty($catalog['url'])? 'style="background-image:url('.$catalog['url'].');"' : ''; ?>></section>
+<?php
+
 do_action('woo_custom_breadcrumb'); 
 ?>
 <header class="woocommerce-products-header">

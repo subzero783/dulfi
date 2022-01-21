@@ -125,6 +125,41 @@ h6 {
   }
 }
 
+// Catalog/Tienda/Store page
+.woocommerce-shop {
+  .top-content {
+    padding-top: 30px;
+  }
+  #catalog-hero {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+  }
+  .primary-and-sidebar-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    #primary.content-area {
+      width: 25%;
+    }
+    .right-side-content {
+      width: 75%;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .primary-and-sidebar-wrapper {
+      flex-flow: column nowrap;
+      #primary.content-area {
+        width: 100%;
+      }
+      .right-side-content {
+        width: 100%;
+      }
+    }
+  }
+}
+
 #desktop-and-mobile-header {
   position: absolute;
   width: 100%;
