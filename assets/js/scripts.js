@@ -56,10 +56,23 @@ jQuery(document).ready(function($){
   // Instagram social feed block
   $('#sb_instagram #sbi_images > .sbi_item:lt(4)').wrapAll('<div class="left_side"></div>');
 
-  // Catalog/Tienda/Store page JS
-  var wrapperDiv = '<div class="right-side-content"></div>';
-  $('.woocommerce-notices-wrapper, .woocommerce-result-count, .woocommerce-ordering, ul.products').wrapAll(wrapperDiv);
+  if($('body').hasClass('woocommerce-shop')){
+    // Catalog/Tienda/Store page JS
+    var wrapperDiv = '<div class="right-side-content"></div>';
+    $('.woocommerce-notices-wrapper, .woocommerce-result-count, .woocommerce-ordering, ul.products').wrapAll(wrapperDiv);
+  
+    var wrapperDiv2 = '<div class="top-content"></div>';
+    $('.woocommerce-breadcrumb, .woocommerce-products-header').wrapAll(wrapperDiv2);
+  
+    $('#wp-block-search__input-1').attr('placeholder', 'Buscar');
 
-  var wrapperDiv2 = '<div class="top-content"></div>';
-  $('.woocommerce-breadcrumb, .woocommerce-products-header').wrapAll(wrapperDiv2);
+    $('.wp-block-search__button').html('<i class="fas fa-search"></i>');
+
+    $(document).on('submit', 'form.wp-block-search', function(e){
+      e.preventDefault();
+      var searchTerm = $(this).find('input[type="search"]').val();
+      window.location.href = '/tienda/?s='+searchTerm+'&post_type=product';
+    }); 
+  }
+
 });   
