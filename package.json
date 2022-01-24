@@ -38,6 +38,7 @@
     "gulp-terser": "^2.1.0",
     "jquery-parallax.js": "^1.5.0",
     "lazyload": "^2.0.0-rc.2",
+    "magnify": "^2.3.3",
     "webpack-stream": "^7.0.0"
   }
 }

@@ -22,8 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' ); 
 
 $catalog = get_field('hero_image','options');
+$hiddenLargeImage = get_field('larger_image');
 
 ?>
+<img style="display:none;" src="<?php echo $hiddenLargeImage['url']; ?>" id="large-image" />
 <section id="catalog-hero" <?php echo !empty($catalog['url'])? 'style="background-image:url('.$catalog['url'].');"' : ''; ?>></section>
 <?php
 

@@ -49,12 +49,12 @@ jQuery(document).ready(function($){
       $(".navbar-mobile").addClass("mobile-sticky");
     } else {
       $("nav#sticky_nav").removeClass("sticky"); 
-      $(".navbar-mobile").removeClass("mobile-sticky"); 
+      $(".navbar-mobile").removeClass("mobile-sticky");  
     }  
   }
 
   // Instagram social feed block
-  $('#sb_instagram #sbi_images > .sbi_item:lt(4)').wrapAll('<div class="left_side"></div>');
+  $('#sb_instagram #sbi_images > .sbi_item:lt(4)').wrapAll('<div class="left_side"></div>'); 
 
   if($('body').hasClass('woocommerce-shop')){
     // Catalog/Tienda/Store page JS
@@ -72,7 +72,20 @@ jQuery(document).ready(function($){
       e.preventDefault();
       var searchTerm = $(this).find('input[type="search"]').val();
       window.location.href = '/tienda/?s='+searchTerm+'&post_type=product';
-    }); 
+    });  
   }
 
+  if($('body').hasClass('single-product')){
+    // Product image
+    $('.woocommerce-product-gallery__wrapper img.wp-post-image').each(function(){
+      var srcUrl = $('#large-image').attr('src');
+      $(this).addClass('zoom').attr('data-magnify-src', srcUrl); 
+    });
+
+    $('.woocommerce-product-gallery__wrapper img.wp-post-image').on('click', 'a', function(e){
+      e.preventDefault();
+    });
+
+    $('.zoom').magnify();
+  }
 });   

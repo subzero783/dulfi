@@ -10,15 +10,15 @@ const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 
 
-// create functions
+// create functions 
 
 // scss
 function compile_scss(){
   // return src('assets/scss/*.scss')
   return src([
-
     './node_modules/aos/dist/aos.css',
     './assets/scss/fonts.scss',
+    './node_modules/magnify/dist/css/magnify.css',
     './assets/scss/styles.scss'
   ])
     .pipe(concat('main.css'))
@@ -42,6 +42,7 @@ function js_min(){
     './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
     './node_modules/slick-carousel/slick/slick.js',
     './node_modules/masonry-layout/dist/masonry.pkgd.min.js',
+    './node_modules/magnify/dist/js/jquery.magnify.js',
     './assets/js/scripts.js'
   ])
     .pipe(concat('main.js'))
