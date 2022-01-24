@@ -29,7 +29,7 @@
                 <?php echo $col_2_menu; ?>
 			</div>
 			<div id="footer_col_4" class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <?php echo !empty($footer_info['title']) ? '<p><strong>'.$footer_info['title'].'</strong></p>' : ''; ?>
+                <?php echo !empty($footer_info['title']) ? '<p>'.$footer_info['title'].'</p>' : ''; ?>
                 <?php echo do_shortcode($footer_info['shortcode_4']);?>
 			</div>
 		</div>
